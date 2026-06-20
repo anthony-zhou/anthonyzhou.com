@@ -54,7 +54,7 @@ function page({ title, body }) {
   <title>${title}</title>
   <style>
     body { font-size: 16px; max-width: 700px; margin: 50px auto; padding: 0 20px; line-height: 1.6; }
-    img { max-width: 100%; }
+    img, video, object { max-width: 100%; height: auto; }
     a { color: inherit; }
     .meta { color: #666; font-size: 0.9em; }
   </style>
@@ -65,17 +65,25 @@ ${body}
 </html>`;
 }
 
-function postsList(posts) {
+function isProject(post) {
+  const c = post.data.categories;
+  return Array.isArray(c) ? c.includes('projects') : c === 'projects';
+}
+
+function list(posts) {
   const items = posts
     .map((p) => `  <li><a href="/${p.slug}/">${p.data.title ?? p.slug}</a></li>`)
     .join('\n');
-  return `<ul id="writing">\n${items}\n</ul>`;
+  return `<ul>\n${items}\n</ul>`;
 }
 
-// A standalone page from pages/*.md. Supports a {{posts}} token that expands
-// to the list of writing.
+// A standalone page from pages/*.md. Supports two tokens:
+//   {{posts}}    -> writing (everything not categorized as a project)
+//   {{projects}} -> projects
 function contentPage(pg, posts) {
-  const md = pg.content.replaceAll('{{posts}}', postsList(posts));
+  const md = pg.content
+    .replaceAll('{{posts}}', list(posts.filter((p) => !isProject(p))))
+    .replaceAll('{{projects}}', list(posts.filter(isProject)));
   return page({
     title: pg.data.title ?? pg.slug,
     body: marked.parse(md),
