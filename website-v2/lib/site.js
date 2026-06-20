@@ -52,12 +52,7 @@ function page({ title, body }) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
-  <style>
-    body { font-size: 16px; max-width: 700px; margin: 50px auto; padding: 0 20px; line-height: 1.6; }
-    img, video, object { max-width: 100%; height: auto; }
-    a { color: inherit; }
-    .meta { color: #666; font-size: 0.9em; }
-  </style>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 ${body}
