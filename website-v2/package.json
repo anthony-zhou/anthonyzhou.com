@@ -1,0 +1,13 @@
+{
+  "name": "website-v2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev.js",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "marked": "^18.0.5"
+  }
+}
