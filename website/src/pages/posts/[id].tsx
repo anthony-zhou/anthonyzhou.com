@@ -110,7 +110,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
       return {
         props: {
           postData,
-          numComments: commentData.response[0].posts,
+          numComments: commentData.response[0]?.posts ?? 0,
         },
       };
     }

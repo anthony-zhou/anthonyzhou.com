@@ -10,28 +10,27 @@
     "generate-index": "node scripts/generate_index.mjs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@types/node": "18.15.3",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.1",
     "disqus-react": "^1.1.5",
-    "eslint": "^8.2.0",
-    "eslint-config-next": "13.2.4",
+    "eslint": "^10.5.0",
+    "eslint-config-next": "^16.2.9",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.469.0",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-transition-group": "^4.4.5",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.2",
-    "typescript": "5.0.2"
+    "remark-html": "^15.0.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "@types/react-transition-group": "^4.4.6",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
@@ -45,7 +44,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "^6.0.3"
   },
   "husky": {
     "hooks": {
