@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mood and Productivity, Pt. 1: Does happiness live up to the hype?"
+title: "Mood and productivity, Pt. 1: Does happiness live up to the hype?"
 date: 2020-1-8
 description: "What is happiness useful for?"
 image: assets/images/happiness-running.png

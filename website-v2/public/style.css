@@ -4,7 +4,6 @@ body {
     margin: 50px auto; 
     padding: 0 20px; 
     line-height: 1.6; 
-    font-family: "Helvetica Neue", Helvetica, Arial;
 }
 img, video, object { max-width: 100%; height: auto; }
 .meta { color: #666; font-size: 0.9em; }

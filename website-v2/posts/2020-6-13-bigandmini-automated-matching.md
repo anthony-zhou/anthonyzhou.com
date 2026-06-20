@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Built a Semi-Automated Matching System for Big & Mini"
+title: "How I built a semi-automated matching system for Big & Mini"
 date: 2020-6-13
 description: "A description of the new matching system we built for Big & Mini."
 image: assets/images/2020/6/codeimage.jpg

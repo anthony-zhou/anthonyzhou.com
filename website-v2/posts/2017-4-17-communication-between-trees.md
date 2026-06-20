@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Communication Between Trees"
+title: "Communication between trees"
 date: 2017-4-17
 description: "A paper I wrote a few years ago about trees and how cool they are."
 image: assets/images/forest.jpg

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Favorite Books of 2020"
+title: "My favorite books of 2020"
 date: 2020-12-1
 description: "I read quite a few books this year. Here are my favorites."
 image: assets/images/2020/12/gatsby.jpg

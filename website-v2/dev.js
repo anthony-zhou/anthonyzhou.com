@@ -60,8 +60,12 @@ const server = http.createServer((req, res) => {
     filePath = path.join(filePath, 'index.html');
   }
 
+  // Never let the browser cache during dev, so every reload reflects the
+  // latest build (otherwise edited CSS/JS/images appear stale until restart).
+  const noCache = { 'Cache-Control': 'no-store, must-revalidate' };
+
   if (!fs.existsSync(filePath)) {
-    res.writeHead(404, { 'Content-Type': 'text/html' });
+    res.writeHead(404, { 'Content-Type': 'text/html', ...noCache });
     res.end('<h1>404</h1>' + LIVE_RELOAD);
     return;
   }
@@ -69,20 +73,22 @@ const server = http.createServer((req, res) => {
   const ext = path.extname(filePath);
   if (ext === '.html') {
     const html = fs.readFileSync(filePath, 'utf8').replace('</body>', LIVE_RELOAD + '\n</body>');
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.writeHead(200, { 'Content-Type': 'text/html', ...noCache });
     res.end(html);
     return;
   }
 
-  res.writeHead(200, { 'Content-Type': MIME[ext] ?? 'application/octet-stream' });
+  res.writeHead(200, { 'Content-Type': MIME[ext] ?? 'application/octet-stream', ...noCache });
   res.end(fs.readFileSync(filePath));
 });
 
-// Debounced watcher over content + generator source.
+// Debounced watcher over content + generator source. The debounce also lets a
+// brand-new file's contents finish flushing to disk before we rebuild — fs.watch
+// often fires the create event before the write is complete.
 let timer;
 function onChange() {
   clearTimeout(timer);
-  timer = setTimeout(rebuild, 50);
+  timer = setTimeout(rebuild, 150);
 }
 for (const dir of [POSTS_DIR, PAGES_DIR, PUBLIC_DIR, 'lib']) {
   if (fs.existsSync(dir)) fs.watch(dir, { recursive: true }, onChange);

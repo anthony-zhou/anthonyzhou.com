@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to be Productive This Summer"
+title: "How to be productive this summer"
 date: 2020-5-17
 description: "A sample daily schedule, designed to maximize your productivity."
 image: assets/images/2020/5/schedule.jfif

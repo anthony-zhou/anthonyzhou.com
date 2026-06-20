@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Thoughts on Futarchy"
+title: "Thoughts on futarchy"
 date: 2021-12-13
 description: "A new system of governance"
 image: assets/images/2021/12/market.jpg

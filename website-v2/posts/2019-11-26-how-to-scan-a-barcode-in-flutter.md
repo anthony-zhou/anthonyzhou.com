@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Scan a Barcode with Flutter"
+title: "How to scan a barcode with Flutter"
 date: 2019-11-26
 description: How to set up a cross-platform app to scan barcodes.
 image: assets/images/scan-barcode-with-flutter.jpeg

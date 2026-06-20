@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Abstraction and Problem Solving"
+title: "Abstraction and problem solving"
 date: 2022-01-08
 description: "When and why traversing layers of abstraction is useful. "
 image: assets/images/2022/01/blossoms-4836548_1920.jpg

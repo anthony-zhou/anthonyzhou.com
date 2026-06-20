@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Dealings with Museum Security in Florence"
+title: "My dealings with museum security in Florence"
 date: 2020-2-26
 description: "A true story from my trip to Florence."
 image: assets/images/motorcycles-florence.jpg

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Invisible Hand Theorem"
+title: "The invisible hand theorem"
 date: 2025-06-03
 description: "Do free markets work? Economic theory has some answers."
 image: assets/images/2025/thailand-7296958_1280.jpg

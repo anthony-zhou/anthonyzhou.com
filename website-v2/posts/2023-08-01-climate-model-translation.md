@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Climate Model Translation"
+title: "Climate model translation"
 date: 2023-08-01
 description: "Proof-of-concept work to translate and modernize a climate model."
 image: /assets/projects/cli_screenshot.png

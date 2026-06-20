@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Oatmeal and Emergence: How a whole can be greater than the sum of its parts"
+title: "Oatmeal and emergence: How a whole can be greater than the sum of its parts"
 date: 2019-12-31
 description: "How a whole can be greater than the sum of its parts"
 image: assets/images/oatmeal.jpg

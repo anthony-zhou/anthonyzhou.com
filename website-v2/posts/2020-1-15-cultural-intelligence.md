@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Many Definitions of Intelligence"
+title: "The many definitions of intelligence"
 date: 2020-1-15
 description: "Improving the way we define intelligence"
 image: assets/images/intelligence.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Third Bowl: Building Online Communities Centered Around Connection"
+title: "The third bowl: Building online communities centered around connection"
 date: 2021-1-19
 description: "The loneliness problem, Social Networking 2.0, and the promise of better digital connection."
 image: assets/images/2021/1/alsopeople.jpg

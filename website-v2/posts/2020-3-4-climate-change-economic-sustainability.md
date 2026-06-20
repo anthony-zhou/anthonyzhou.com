@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Sustainability Makes Economic Sense"
+title: "Why sustainability makes economic sense"
 date: 2020-3-4
 description: "An analysis of investment incentives reveals a possible light at the end of the tunnel for the climate crisis."
 image: assets/images/economics-of-sustainability.png

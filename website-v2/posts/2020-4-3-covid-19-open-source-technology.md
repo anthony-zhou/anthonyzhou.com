@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Get Involved: Open Source Technology Fighting COVID-19"
+title: "Get involved: Open source technology fighting COVID-19"
 date: 2020-4-3
 description: "A list of open source initiatives fighting the outbreak of novel coronavirus."
 image: assets/images/cdc-coronavirus.jpg

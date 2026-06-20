@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Version Management with a JavaScript Service Worker"
+title: "Version management with a JavaScript service worker"
 date: 2020-1-1
 description: "How to manage an app's version numbers with the Service Worker API"
 image: assets/images/js-serviceworker.png

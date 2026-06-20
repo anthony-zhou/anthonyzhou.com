@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dream Air Quality Sensor"
+title: "Dream air quality sensor"
 date: 2022-07-01
 description: "A decentralized wireless sensor network for measuring pollution and tracing emissions sources."
 image: /assets/projects/dream_multiple_shots.png

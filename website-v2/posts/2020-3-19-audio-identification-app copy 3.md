@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Attempt at On-Device Machine Learning"
+title: "My attempt at on-device machine learning"
 date: 2020-3-19
 description: "Using machine learning to identify audio from an iOS device."
 image: assets/images/iPhone in hand.jpg

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Two Sides of Liupanshui"
+title: "The two sides of Liupanshui"
 date: 2020-10-15
 description: "Musings from my trip to China."
 image: assets/images/2020/10/liupanshui_skyscrapers.jpg

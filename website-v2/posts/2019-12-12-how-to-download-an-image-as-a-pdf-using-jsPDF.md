@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Download an Image as a PDF using jsPDF"
+title: "How to download an image as a PDF using jsPDF"
 date: 2019-12-12
 description: Using Javascript to give users a "Save as PDF" option
 image: assets/images/png-to-pdf.png
