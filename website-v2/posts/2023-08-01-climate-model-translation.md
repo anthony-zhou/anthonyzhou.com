@@ -19,7 +19,7 @@ But the field is held back by technical debt. Most models are coded in Fortran o
 
 To address this issue, we can now translate climate models into fast and differentiable Python using large language models like GPT-4, together with traditional tools like static analysis and unit tests.
 
-Together with Pierre Gentine and Linnia Hawkins of Columbia and LEAP STC, I built tools for performing translation from Fortran to Python, and presented the work to scientists and software engineers at NCAR (National Center for Atmospheric Research). Code is on [GitHub](https://github.com/anthony-zhou/climate_code_conversion/) and paper is on the way.
+Together with Pierre Gentine and Linnia Hawkins of Columbia and LEAP STC, I built tools for performing translation from Fortran to Python, and presented the work to scientists and software engineers at NCAR (National Center for Atmospheric Research). Code is on [GitHub](https://github.com/anthony-zhou/climate_code_conversion/) and paper is available on [ArXiv](https://arxiv.org/abs/2405.00018).
 
 Eventually, this work aims for a future where climate models are differentiable and GPU/TPU-friendly, making them faster and more accurate.
 
