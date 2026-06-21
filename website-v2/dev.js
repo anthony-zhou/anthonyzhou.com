@@ -1,7 +1,8 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
-import { build, OUT_DIR, POSTS_DIR, PAGES_DIR, PUBLIC_DIR } from './lib/site.js';
+import { spawn } from 'node:child_process';
+import { OUT_DIR, POSTS_DIR, PAGES_DIR, PUBLIC_DIR } from './lib/site.js';
 
 const PORT = process.env.PORT ? Number(process.env.PORT) : 5173;
 
@@ -34,20 +35,34 @@ const LIVE_RELOAD = `
 
 const clients = new Set();
 
+// Run the build in a fresh child process so edits to the build logic itself
+// (lib/site.js, lib/matter.js) take effect — an in-process import would be
+// cached for the life of the dev server and keep running the old template code.
+let building = false;
+let pending = false;
 function rebuild() {
-  try {
-    const count = build();
-    console.log(`Rebuilt ${count} posts`);
-    for (const res of clients) {
-      try {
-        res.write('data: reload\n\n');
-      } catch {
-        clients.delete(res);
+  if (building) {
+    pending = true;
+    return;
+  }
+  building = true;
+  const proc = spawn(process.execPath, ['build.js'], { stdio: 'inherit' });
+  proc.on('exit', (code) => {
+    building = false;
+    if (code === 0) {
+      for (const res of clients) {
+        try {
+          res.write('data: reload\n\n');
+        } catch {
+          clients.delete(res);
+        }
       }
     }
-  } catch (err) {
-    console.error('Build failed:', err.message);
-  }
+    if (pending) {
+      pending = false;
+      rebuild();
+    }
+  });
 }
 
 rebuild();

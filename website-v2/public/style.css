@@ -7,9 +7,17 @@ body {
     font-family: "Verdana"
 }
 img, video, object { max-width: 100%; height: auto; }
+.description { color: #444; font-style: italic; margin-bottom: 0.25em; }
 .meta { color: #666; font-size: 0.9em; }
 
 
+
+/* Footnotes */
+.footnote-ref { line-height: 0; }
+.footnotes-sep { margin-top: 2.5em; border: none; border-top: 1px solid #ddd; }
+.footnotes { font-size: 0.9em; color: #444; }
+.footnotes li { margin-bottom: 0.5em; }
+.footnote-backref { text-decoration: none; }
 
 /* Helpers you can drop on any <img>/<video> in a post's markdown */
 .half   { width: 50%; }

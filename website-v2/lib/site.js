@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { marked } from 'marked';
 import { matter } from './matter.js';
+import { renderMarkdown } from './markdown.js';
 
 export const POSTS_DIR = 'posts';
 export const PAGES_DIR = 'pages';
@@ -20,7 +20,7 @@ export function loadPosts() {
       return {
         slug: file.replace(/\.md$/, ''),
         data,
-        html: marked.parse(content),
+        html: renderMarkdown(content),
       };
     })
     .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
@@ -81,7 +81,7 @@ function contentPage(pg, posts) {
     .replaceAll('{{projects}}', list(posts.filter(isProject)));
   return page({
     title: pg.data.title ?? pg.slug,
-    body: marked.parse(md),
+    body: renderMarkdown(md),
   });
 }
 
@@ -92,6 +92,7 @@ function postPage(post) {
     body: `  <p><a href="/">← Home</a></p>
   <article>
     <h1>${post.data.title ?? post.slug}</h1>
+    ${post.data.description ? `<p class="description">${post.data.description}</p>` : ''}
     ${date ? `<p class="meta">${date}</p>` : ''}
     ${post.html}
   </article>`,
