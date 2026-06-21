@@ -23,7 +23,7 @@ Working on Snapnotes has confirmed by conviction that human note-taking, and wri
 
 Language models can be either a crutch or an exoskeleton. By continuing to tinker, I believe we can build tools that don't just replace human tasks but enhance our ability to think, reason, and become better version of ourselves.
 
-<video class="w-full" autoplay loop muted>
+<video class="center" autoplay loop muted playsinline preload="metadata">
   <source src="/assets/projects/snapnotes_demo.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>

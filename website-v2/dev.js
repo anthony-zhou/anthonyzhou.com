@@ -19,10 +19,17 @@ const MIME = {
   '.webp': 'image/webp',
 };
 
-// Injected into every served HTML page: reconnects + reloads on rebuild.
+// Injected into every served HTML page: reloads on rebuild. The EventSource is
+// closed on navigation so its connection slot is freed immediately — otherwise
+// stale streams pile up and exhaust the browser's ~6-per-origin connection pool,
+// hanging the next page load.
 const LIVE_RELOAD = `
 <script>
-  new EventSource('/__livereload').onmessage = () => location.reload();
+  (function () {
+    var es = new EventSource('/__livereload');
+    es.onmessage = function () { location.reload(); };
+    addEventListener('pagehide', function () { es.close(); });
+  })();
 </script>`;
 
 const clients = new Set();
@@ -31,7 +38,13 @@ function rebuild() {
   try {
     const count = build();
     console.log(`Rebuilt ${count} posts`);
-    for (const res of clients) res.write('data: reload\n\n');
+    for (const res of clients) {
+      try {
+        res.write('data: reload\n\n');
+      } catch {
+        clients.delete(res);
+      }
+    }
   } catch (err) {
     console.error('Build failed:', err.message);
   }
@@ -48,7 +61,10 @@ const server = http.createServer((req, res) => {
     });
     res.write('\n');
     clients.add(res);
-    req.on('close', () => clients.delete(res));
+    const drop = () => clients.delete(res);
+    req.on('close', drop);
+    res.on('close', drop);
+    res.on('error', drop);
     return;
   }
 
@@ -93,5 +109,17 @@ function onChange() {
 for (const dir of [POSTS_DIR, PAGES_DIR, PUBLIC_DIR, 'lib']) {
   if (fs.existsSync(dir)) fs.watch(dir, { recursive: true }, onChange);
 }
+
+// Heartbeat: a write to a dead socket throws, letting us prune clients whose
+// disconnect we never got a 'close' event for.
+setInterval(() => {
+  for (const res of clients) {
+    try {
+      res.write(': ping\n\n');
+    } catch {
+      clients.delete(res);
+    }
+  }
+}, 30000).unref();
 
 server.listen(PORT, () => console.log(`Dev server: http://localhost:${PORT}`));
