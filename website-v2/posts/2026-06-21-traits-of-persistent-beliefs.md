@@ -79,4 +79,4 @@ My prediction is that history will shift increasingly towards movements that can
 
 [^1]: Even though Lao Tzu was probably fictional, this was the period in which Taoist ideas coalesced into the *Tao Te Ching*
 
-[^2]: For more on the history of Christianity, I highly recommend [*Dominion*](https://en.wikipedia.org/wiki/Dominion_(Holland_book) by Tom Holland.
+[^2]: For more on the history of Christianity, I recommend [*Dominion*](https://en.wikipedia.org/wiki/Dominion_(Holland_book) by Tom Holland.
