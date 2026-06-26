@@ -8,7 +8,7 @@ categories: [commentary]
 tags: [spirituality]
 ---
 
-When I attended my first effective altruism (EA) conference in 2022, I met some people who called themselves community builders. The job title struck me as strange, because it's so blunt. It implies that community is something that can be bought and sold. 
+When I attended my first effective altruism (EA) conference in 2022, I met some people who called themselves community builders. The job title struck me as strangely blunt, because it implies that community is something that can be bought and sold. 
 
 Over time, however, I have come to prefer the EA community's bluntness. Being honest about your movement's attempts to buy community allows you to share strategies for [building](https://forum.effectivealtruism.org/posts/SaaLXZv9aobdHcQZA/building-an-impact-focused-community) [successful](https://forum.effectivealtruism.org/posts/oPao8avpq48GPvzDZ/two-years-community-building-ten-lessons-re-learned) communities, as well as their [pitfalls](https://forum.effectivealtruism.org/posts/agFxcinYtBqjDgCNk/sam-s-hot-takes-on-ea-community-building). Since its founding in the early 2010s, EA has grown rapidly, with over [$1 billion](https://www.eagrantsdatabase.org/) in yearly grants and substantial influence on the future of AI development, which begs the question: what is it about effective altruism and its community builders that have made it so successful? 
 
