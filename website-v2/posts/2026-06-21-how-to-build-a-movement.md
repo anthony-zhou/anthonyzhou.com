@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to build a movement"
-description: "Lessons from effective altruism"
+description: "Lessons from effective altruism and Christianity"
 date: 2026-06-25
 author: anthony
 categories: [commentary]
